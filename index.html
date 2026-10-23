@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부산해사고 면접 대비</title>
+<meta name="description" content="부산해사고등학교 신입생 심층면접 기출 13문항 학습·연습 사이트">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f7fb; --surface:#ffffff; --surface2:#eef3f9; --ink:#0f1b2d; --muted:#5a6b82;
+  --navy:#0b2a4a; --sea:#1565c0; --sea-soft:#e3eefc; --gold:#d4a017; --gold-soft:#fff6dc;
+  --good:#1b8a5a; --good-soft:#e3f6ec; --bad:#c0392b; --bad-soft:#fdeceb; --line:#d9e2ee;
+  --shadow:0 2px 10px rgba(11,42,74,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1524; --surface:#13223a; --surface2:#1a2c48; --ink:#e8eef7; --muted:#9db0c8;
+    --navy:#0a1e36; --sea:#6aa9ff; --sea-soft:#1b3356; --gold:#f2c14e; --gold-soft:#3a3016;
+    --good:#4cc68a; --good-soft:#163a2a; --bad:#ff7b6e; --bad-soft:#3d1c1a; --line:#2a3d5c;
+    --shadow:0 2px 10px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1524; --surface:#13223a; --surface2:#1a2c48; --ink:#e8eef7; --muted:#9db0c8;
+  --navy:#0a1e36; --sea:#6aa9ff; --sea-soft:#1b3356; --gold:#f2c14e; --gold-soft:#3a3016;
+  --good:#4cc68a; --good-soft:#163a2a; --bad:#ff7b6e; --bad-soft:#3d1c1a; --line:#2a3d5c;
+  --shadow:0 2px 10px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px;word-break:keep-all;overflow-wrap:anywhere}
+button{font-family:inherit;cursor:pointer}
+textarea{font-family:inherit}
+
+/* header */
+header{background:linear-gradient(135deg,#0b2a4a 0%,#123e6b 60%,#1565c0 100%);color:#fff;padding:28px 16px 70px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:48px;background:var(--bg);
+  -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 48' preserveAspectRatio='none'><path d='M0 24 C150 0 300 48 450 24 S750 0 900 24 S1100 48 1200 24 V48 H0Z' fill='black'/></svg>") center/100% 100% no-repeat;
+  mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 48' preserveAspectRatio='none'><path d='M0 24 C150 0 300 48 450 24 S750 0 900 24 S1100 48 1200 24 V48 H0Z' fill='black'/></svg>") center/100% 100% no-repeat}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+header .wrap{padding:0}
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:3px 10px;border-radius:99px;font-size:13px}
+header h1{font-size:clamp(24px,5vw,34px);font-weight:900;margin:14px 0 6px;letter-spacing:-.5px}
+header p{opacity:.9;font-size:15px}
+.theme-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:10px;padding:6px 10px;font-size:14px}
+.progress-box{margin-top:18px;background:rgba(255,255,255,.12);border-radius:12px;padding:12px 14px}
+.progress-label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+.bar{height:10px;background:rgba(255,255,255,.2);border-radius:99px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--gold);width:0;transition:width .4s}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);margin-top:-20px}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding:10px 16px;max-width:920px;margin:0 auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:99px;font-size:15px;font-weight:500}
+.tab.active{background:var(--sea);border-color:var(--sea);color:#fff}
+:root[data-theme="dark"] .tab.active{color:#0b1524}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tab.active{color:#0b1524}}
+
+main{padding:20px 0 60px}
+section.page{display:none}
+section.page.active{display:block;animation:fade .25s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+h2{font-size:22px;font-weight:900;margin:8px 0 14px;color:var(--ink)}
+h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
+.muted{color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.callout{border-radius:12px;padding:14px 16px;margin:10px 0}
+.callout.gold{background:var(--gold-soft);border-left:4px solid var(--gold)}
+.callout.blue{background:var(--sea-soft);border-left:4px solid var(--sea)}
+.callout.good{background:var(--good-soft);border-left:4px solid var(--good)}
+.callout.bad{background:var(--bad-soft);border-left:4px solid var(--bad)}
+ul.clean{list-style:none}
+ul.clean li{padding-left:20px;position:relative;margin:4px 0}
+ul.clean li::before{content:"";position:absolute;left:0;top:.45em;width:13px;height:13px;background:var(--sea);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 %3E %3Cpath d=%22M12 6v16%22 /%3E %3Cpath d=%22m19 13 2-1a9 9 0 0 1-18 0l2 1%22 /%3E %3Cpath d=%22M9 11h6%22 /%3E %3Ccircle cx=%2212%22 cy=%224%22 r=%222%22 /%3E %3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 %3E %3Cpath d=%22M12 6v16%22 /%3E %3Cpath d=%22m19 13 2-1a9 9 0 0 1-18 0l2 1%22 /%3E %3Cpath d=%22M9 11h6%22 /%3E %3Ccircle cx=%2212%22 cy=%224%22 r=%222%22 /%3E %3C/svg%3E") center/contain no-repeat}
+ul.dot{padding-left:20px}
+ul.dot li{margin:3px 0}
+.step{display:flex;gap:12px;align-items:flex-start;margin:10px 0}
+.step b.n{flex:0 0 32px;height:32px;border-radius:50%;background:var(--sea);color:#fff;display:grid;place-items:center;font-size:15px}
+:root[data-theme="dark"] .step b.n{color:#0b1524}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .step b.n{color:#0b1524}}
+
+/* question list */
+.filter{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:5px 12px;border-radius:99px;font-size:14px}
+.chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+:root[data-theme="dark"] .chip.active{background:var(--sea);color:#0b1524;border-color:var(--sea)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip.active{background:var(--sea);color:#0b1524;border-color:var(--sea)}}
+.q-item{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
+.q-head{display:flex;align-items:center;gap:12px;padding:16px;cursor:pointer;width:100%;background:none;border:0;text-align:left;color:var(--ink)}
+.q-num{flex:0 0 40px;height:40px;border-radius:12px;background:var(--sea-soft);color:var(--sea);font-weight:900;display:grid;place-items:center;font-size:17px}
+.q-item.done .q-num{background:var(--good);color:#fff}
+.q-title{flex:1;font-weight:700;font-size:16.5px;line-height:1.5}
+.q-cat{display:inline-block;font-size:12px;font-weight:500;color:var(--muted);margin-top:2px}
+.q-arrow{transition:transform .2s;color:var(--muted)}
+.q-item.open .q-arrow{transform:rotate(180deg)}
+.q-body{display:none;padding:0 16px 18px;border-top:1px solid var(--line)}
+.q-item.open .q-body{display:block}
+.blk{margin-top:16px}
+.blk-t{font-size:14px;font-weight:700;color:var(--sea);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.answer{background:var(--surface2);border-radius:12px;padding:14px 16px;font-size:15.5px;line-height:1.85;position:relative}
+.answer.blur{filter:blur(6px);user-select:none}
+.ph{background:var(--gold-soft);color:var(--ink);border-bottom:2px solid var(--gold);padding:0 3px;border-radius:3px;font-weight:500}
+.btn-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:10px;font-size:14.5px;font-weight:500}
+.btn.primary{background:var(--sea);border-color:var(--sea);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0b1524}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#0b1524}}
+.btn.good{background:var(--good);border-color:var(--good);color:#fff}
+.btn:active{transform:scale(.98)}
+textarea.my{width:100%;min-height:150px;border:1px solid var(--line);border-radius:12px;padding:12px;font-size:15px;background:var(--surface);color:var(--ink);line-height:1.7;resize:vertical}
+.count{font-size:13px;color:var(--muted);text-align:right;margin-top:4px}
+.tail li{margin:4px 0}
+.related{font-size:13.5px;color:var(--muted);margin-top:12px}
+
+/* practice */
+.practice-q{font-size:clamp(20px,4.5vw,26px);font-weight:900;line-height:1.5;margin:10px 0 18px;min-height:3em}
+.timer{font-size:48px;font-weight:900;font-variant-numeric:tabular-nums;text-align:center;color:var(--sea)}
+.timer.warn{color:var(--gold)} .timer.over{color:var(--bad)}
+.check-list label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line);cursor:pointer}
+.check-list input{margin-top:6px;width:18px;height:18px;flex:0 0 18px;accent-color:var(--sea)}
+.score{font-size:18px;font-weight:700;margin-top:10px}
+.mock-steps{display:flex;gap:6px;margin-bottom:10px}
+.mock-steps i{flex:1;height:6px;border-radius:99px;background:var(--line)}
+.mock-steps i.on{background:var(--sea)}
+.hint-box{display:none}
+
+/* flashcards */
+.flash-wrap{perspective:1000px}
+.flash{position:relative;height:230px;cursor:pointer;transform-style:preserve-3d;transition:transform .5s}
+.flash.flip{transform:rotateY(180deg)}
+.flash .side{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:22px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px solid var(--line);box-shadow:var(--shadow)}
+.flash .front{background:var(--navy);color:#fff}
+.flash .front b{font-size:26px;font-weight:900}
+.flash .back{background:var(--surface);transform:rotateY(180deg);font-size:15.5px;overflow:auto}
+.flash-nav{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.term{padding:12px 0;border-bottom:1px solid var(--line)}
+.term:last-child{border-bottom:0}
+.term b{color:var(--sea)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--surface2)}
+.tbl-wrap{overflow-x:auto}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 16px 40px;border-top:1px solid var(--line)}
+footer a{color:var(--sea)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(100px);background:var(--navy);color:#fff;padding:10px 18px;border-radius:99px;font-size:14px;transition:transform .3s;z-index:50}
+.toast.show{transform:translateX(-50%) translateY(0)}
+@media print{
+  nav,header .progress-box,.btn-row,textarea,.theme-btn,#practice,#mock,footer .noprint{display:none!important}
+  section.page{display:block!important}
+  .q-body{display:block!important}
+  .answer.blur{filter:none}
+  body{background:#fff;color:#000}
+}
+.ic{width:1.1em;height:1.1em;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.18em}
+.badge,.theme-btn,.tab,.btn,.blk-t,h2,h3,.score{display:inline-flex;align-items:center;gap:6px}
+h2,h3,.blk-t{display:flex}
+.q-num .ic{width:20px;height:20px}
+.q-arrow{display:inline-flex}
+.related .ic,.callout .ic,.term .ic{color:var(--sea)}
+.callout.gold .ic{color:var(--gold)}.callout.bad .ic{color:var(--bad)}
+h2 .ic,h3 .ic{color:var(--sea)}
+</style>
+</head>
+<body>
+<!-- Icons: Lucide (https://lucide.dev), ISC License -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-anchor" viewBox="0 0 24 24"><path d="M12 6v16" /> <path d="m19 13 2-1a9 9 0 0 1-18 0l2 1" /> <path d="M9 11h6" /> <circle cx="12" cy="4" r="2" /></symbol><symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M4.929 4.929 19.07 19.071" /></symbol><symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 5v16" /> <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></symbol><symbol id="i-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3" /> <path d="M16 2v3" /> <rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M3 9h18" /> <path d="M8 13h.01" /> <path d="M12 13h.01" /> <path d="M16 13h.01" /> <path d="M8 17h.01" /> <path d="M12 17h.01" /> <path d="M16 17h.01" /></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol><symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol><symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" /></symbol><symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" /></symbol><symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></symbol><symbol id="i-circle-question-mark" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></symbol><symbol id="i-clipboard-list" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="M12 11h4" /> <path d="M12 16h4" /> <path d="M8 11h.01" /> <path d="M8 16h.01" /></symbol><symbol id="i-clipboard-paste" viewBox="0 0 24 24"><path d="M11 14h10" /> <path d="M16 4h2a2 2 0 0 1 2 2v1.344" /> <path d="m17 18 4-4-4-4" /> <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 1.793-1.113" /> <rect x="8" y="2" width="8" height="4" rx="1" /></symbol><symbol id="i-dices" viewBox="0 0 24 24"><rect width="12" height="12" x="2" y="10" rx="2" ry="2" /> <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" /> <path d="M6 18h.01" /> <path d="M10 14h.01" /> <path d="M15 6h.01" /> <path d="M18 9h.01" /></symbol><symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z" /> <path d="m2.5 21.5 1.4-1.4" /> <path d="m20.1 3.9 1.4-1.4" /> <path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z" /> <path d="m9.6 14.4 4.8-4.8" /></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /> <circle cx="12" cy="12" r="3" /></symbol><symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /> <path d="m2 2 20 20" /></symbol><symbol id="i-house" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /> <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol><symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></symbol><symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /> <path d="M9 18h6" /> <path d="M10 22h4" /></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></symbol><symbol id="i-list-checks" viewBox="0 0 24 24"><path d="M13 5h8" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /></symbol><symbol id="i-list-ordered" viewBox="0 0 24 24"><path d="M11 5h10" /> <path d="M11 12h10" /> <path d="M11 19h10" /> <path d="M4 4h1v5" /> <path d="M4 9h2" /> <path d="M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02" /></symbol><symbol id="i-message-square-quote" viewBox="0 0 24 24"><path d="M14 14a2 2 0 0 0 2-2V8h-2" /> <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /> <path d="M8 14a2 2 0 0 0 2-2V8H8" /></symbol><symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 19v3" /> <path d="M19 10v2a7 7 0 0 1-14 0v-2" /> <rect x="9" y="2" width="6" height="13" rx="3" /></symbol><symbol id="i-newspaper" viewBox="0 0 24 24"><path d="M15 18h-5" /> <path d="M18 14h-8" /> <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2" /> <rect width="8" height="4" x="10" y="6" rx="1" /></symbol><symbol id="i-notebook-pen" viewBox="0 0 24 24"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /></symbol><symbol id="i-party-popper" viewBox="0 0 24 24"><path d="M5.8 11.3 2 22l10.7-3.79" /> <path d="M4 3h.01" /> <path d="M22 8h.01" /> <path d="M15 2h.01" /> <path d="M22 20h.01" /> <path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10" /> <path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17" /> <path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7" /> <path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z" /></symbol><symbol id="i-pen-line" viewBox="0 0 24 24"><path d="M13 21h8" /> <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 17v5" /> <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z" /></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M12 5v14" /></symbol><symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /> <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" /> <rect x="6" y="14" width="12" height="8" rx="1" /></symbol><symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4" /> <path d="M3 11v-1a4 4 0 0 1 4-4h14" /> <path d="m7 22-4-4 4-4" /> <path d="M21 13v1a4 4 0 0 1-4 4H3" /></symbol><symbol id="i-rotate-ccw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /> <path d="M3 3v5h5" /></symbol><symbol id="i-ship" viewBox="0 0 24 24"><path d="M12 2v2" /> <path d="M12 9.189V13" /> <path d="M19 12V6a2 2 0 00-2-2H7a2 2 0 00-2 2v6" /> <path d="M19.38 19A11.6 11.6 0 0021 13l-8.188-3.639a2 2 0 00-1.624 0L3 13.001a11.6 11.6 0 002.81 7.76" /> <path d="M2 20c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /></symbol><symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /> <path d="M12 18h.01" /></symbol><symbol id="i-square" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" /></symbol><symbol id="i-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2" /> <path d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715" /> <path d="M16 12a4 4 0 0 0-4-4" /> <path d="m19 5-1.256 1.256" /> <path d="M20 12h2" /></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <circle cx="12" cy="12" r="6" /> <circle cx="12" cy="12" r="2" /></symbol><symbol id="i-thumbs-up" viewBox="0 0 24 24"><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" /> <path d="M7 10v12" /></symbol><symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2" /> <line x1="12" x2="15" y1="14" y2="11" /> <circle cx="12" cy="14" r="8" /></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2" /> <path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2" /> <path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3" /> <path d="M4 22h16" /> <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" /> <path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3" /></symbol><symbol id="i-undo-2" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5" /> <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></symbol><symbol id="i-volume-1" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /> <path d="M16 9a5 5 0 0 1 0 6" /></symbol><symbol id="i-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /> <path d="M16 9a5 5 0 0 1 0 6" /> <path d="M19.364 18.364a9 9 0 0 0 0-12.728" /></symbol></defs></svg>
+
+<header>
+  <div class="wrap">
+    <div class="top-row">
+      <span class="badge"><svg class="ic" aria-hidden="true"><use href="#i-anchor"/></svg> 2027학년도 입시 대비</span>
+      <button class="theme-btn" id="themeBtn" aria-label="화면 테마 바꾸기"><svg class="ic" aria-hidden="true"><use href="#i-sun-moon"/></svg> 테마</button>
+    </div>
+    <h1>부산해사고 면접, 한 문항씩 정복하기</h1>
+    <p>기출 13문항 · 모범답안 · 꼬리질문 · 실전 타이머 연습</p>
+    <div class="progress-box">
+      <div class="progress-label"><span>나의 연습 진도</span><span id="progText">0 / 13</span></div>
+      <div class="bar"><i id="progBar"></i></div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-page="home"><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg> 시작하기</button>
+    <button class="tab" data-page="questions"><svg class="ic" aria-hidden="true"><use href="#i-clipboard-list"/></svg> 기출 13문항</button>
+    <button class="tab" data-page="practice"><svg class="ic" aria-hidden="true"><use href="#i-timer"/></svg> 1문항 연습</button>
+    <button class="tab" data-page="mock"><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg> 모의면접</button>
+    <button class="tab" data-page="extra"><svg class="ic" aria-hidden="true"><use href="#i-circle-question-mark"/></svg> 예상 추가질문</button>
+    <button class="tab" data-page="know"><svg class="ic" aria-hidden="true"><use href="#i-book-open"/></svg> 배경지식</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- HOME -->
+<section class="page active" id="home">
+  <h2>면접, 이렇게 준비해요</h2>
+
+  <div class="callout gold">
+    <b><svg class="ic" aria-hidden="true"><use href="#i-lightbulb"/></svg> 성적이 중간이라면 오히려 면접이 기회예요.</b><br>
+    면접관은 "공부를 제일 잘하는 학생"보다 <b>"배 위에서 3년 뒤 믿고 맡길 수 있는 학생"</b>을 찾습니다.
+    성실함, 규칙을 지키는 태도, 바다에 대한 진짜 관심, 끝까지 해내는 모습을 보여주면 충분히 통과할 수 있어요.
+  </div>
+
+  <div class="card">
+    <h3><svg class="ic" aria-hidden="true"><use href="#i-list-ordered"/></svg> 모든 답변의 기본 틀: 결 · 경 · 다</h3>
+    <div class="step"><b class="n">1</b><div><b>결론 먼저</b> — 질문에 대한 답을 첫 문장에 바로 말해요.<br><span class="muted">"저는 ○○ 때문에 지원했습니다."</span></div></div>
+    <div class="step"><b class="n">2</b><div><b>경험·이유</b> — 나만의 구체적인 경험 1개를 짧게 붙여요. (언제, 무엇을, 어떻게 느꼈는지)</div></div>
+    <div class="step"><b class="n">3</b><div><b>다짐</b> — 해사고·해기사와 연결해 한 문장으로 마무리해요.<br><span class="muted">"입학하면 ○○하는 학생이 되겠습니다."</span></div></div>
+    <div class="callout blue" style="margin-top:12px"><svg class="ic" aria-hidden="true"><use href="#i-timer"/></svg> 한 답변은 <b>40초~1분</b>이 적당해요. 글자 수로는 약 <b>250~350자</b>입니다.</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg> 꼭 지킬 것</h3>
+      <ul class="clean">
+        <li>들어갈 때·나올 때 또박또박 인사</li>
+        <li>허리 펴고, 면접관 눈(또는 미간) 보기</li>
+        <li>"~요"보다 <b>"~습니다"</b> 말투</li>
+        <li>모르는 질문은 솔직하게: "정확히는 모르지만, 제 생각은…"</li>
+        <li>마지막 질문엔 준비한 <b>한마디</b> 꼭 하기</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><svg class="ic" aria-hidden="true"><use href="#i-ban"/></svg> 피할 것</h3>
+      <ul class="clean">
+        <li>통째로 외운 티 나는 말투 (중간에 막히면 다 무너짐)</li>
+        <li>"학비가 무료라서", "취업이 잘 돼서"만 말하기</li>
+        <li>"잘 모르겠어요", "그냥요"로 끝내기</li>
+        <li>다른 친구·학교를 깎아내리기</li>
+        <li>과장하거나 지어낸 경험 (꼬리질문에서 들통나요)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><svg class="ic" aria-hidden="true"><use href="#i-calendar-days"/></svg> 추천 학습 순서</h3>
+    <div class="step"><b class="n">1</b><div><b>기출 13문항</b> 탭에서 모범답안을 읽고, <span class="ph">노란 칸</span>을 내 경험으로 바꿔 <b>나의 답변</b>에 적어요. (자동 저장)</div></div>
+    <div class="step"><b class="n">2</b><div>소리 내서 3번 읽은 뒤 <b>"연습 완료"</b>를 눌러 진도를 채워요.</div></div>
+    <div class="step"><b class="n">3</b><div><b>1문항 연습</b>에서 답을 가리고 타이머를 켠 채 말로 대답해요.</div></div>
+    <div class="step"><b class="n">4</b><div>면접 일주일 전부터는 매일 <b>모의면접</b>(5문항 랜덤) 1회! 가족에게 면접관 역할을 부탁하면 더 좋아요.</div></div>
+  </div>
+
+  <div class="callout blue">
+    <svg class="ic" aria-hidden="true"><use href="#i-notebook-pen"/></svg> 같은 뜻의 질문이 반복돼요. <b>1번 = 6번</b>(지원동기), <b>2번 = 8번</b>(학업계획), <b>3번 = 9번</b>(진로·목표)은 이어지도록 준비하면 시간이 절약돼요.
+  </div>
+</section>
+
+<!-- QUESTIONS -->
+<section class="page" id="questions">
+  <h2>기출 13문항 완전 정복</h2>
+  <p class="muted" style="margin-bottom:12px">문항을 누르면 질문 의도 → 핵심 포인트 → 모범답안 → 꼬리질문 순서로 볼 수 있어요. <span class="ph">노란 칸</span>은 꼭 내 이야기로 바꾸세요.</p>
+  <div class="filter" id="filter"></div>
+  <div id="qList"></div>
+</section>
+
+<!-- PRACTICE -->
+<section class="page" id="practice">
+  <h2><svg class="ic" aria-hidden="true"><use href="#i-timer"/></svg> 1문항 집중 연습</h2>
+  <div class="card">
+    <div class="filter" id="pickRow"></div>
+    <div class="muted" style="font-size:14px">질문</div>
+    <div class="practice-q" id="pQ">아래 버튼을 눌러 질문을 뽑아 보세요.</div>
+    <div class="timer" id="pTimer">0:00</div>
+    <p class="muted" style="text-align:center;font-size:13px;margin-top:-4px">목표 40초~1분 · 1분 30초 넘으면 빨간색</p>
+    <div class="btn-row" style="justify-content:center">
+      <button class="btn primary" id="pRandom"><svg class="ic" aria-hidden="true"><use href="#i-dices"/></svg> 랜덤 질문</button>
+      <button class="btn" id="pSpeak"><svg class="ic" aria-hidden="true"><use href="#i-volume-2"/></svg> 질문 듣기</button>
+      <button class="btn good" id="pStart"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg> 답변 시작</button>
+      <button class="btn" id="pHint"><svg class="ic" aria-hidden="true"><use href="#i-lightbulb"/></svg> 힌트/답안</button>
+    </div>
+    <div class="hint-box" id="pHintBox"></div>
+  </div>
+  <div class="card">
+    <h3><svg class="ic" aria-hidden="true"><use href="#i-list-checks"/></svg> 방금 답변 셀프 체크</h3>
+    <div class="check-list" id="pCheck"></div>
+    <div class="score" id="pScore"></div>
+  </div>
+</section>
+
+<!-- MOCK -->
+<section class="page" id="mock">
+  <h2><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg> 실전 모의면접 (5문항)</h2>
+  <div class="card" id="mockIntro">
+    <p>실제 면접처럼 질문 5개가 랜덤으로 나와요. 질문을 <b>소리로 듣고</b>, 바로 말로 대답한 뒤 <b>다음</b>을 누르세요. 답안은 끝날 때까지 볼 수 없어요.</p>
+    <div class="callout gold"><svg class="ic" aria-hidden="true"><use href="#i-smartphone"/></svg> 휴대폰 녹음기를 켜고 연습하면, 다시 들으면서 "음…", "어…"가 몇 번 나왔는지 셀 수 있어요.</div>
+    <label style="display:flex;gap:8px;align-items:center;margin:8px 0"><input type="checkbox" id="mockVoice" checked style="width:18px;height:18px;accent-color:var(--sea)"> 질문을 음성으로 읽어주기</label>
+    <div class="btn-row"><button class="btn primary" id="mockStart">면접 시작하기</button></div>
+  </div>
+  <div class="card" id="mockRun" style="display:none">
+    <div class="mock-steps" id="mockSteps"></div>
+    <div class="muted" id="mockLabel" style="font-size:14px"></div>
+    <div class="practice-q" id="mockQ"></div>
+    <div class="timer" id="mockTimer">0:00</div>
+    <div class="btn-row" style="justify-content:center">
+      <button class="btn" id="mockRepeat"><svg class="ic" aria-hidden="true"><use href="#i-volume-2"/></svg> 다시 듣기</button>
+      <button class="btn primary" id="mockNext">다음 질문 <svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+    </div>
+  </div>
+  <div class="card" id="mockResult" style="display:none"></div>
+</section>
+
+<!-- EXTRA -->
+<section class="page" id="extra">
+  <h2><svg class="ic" aria-hidden="true"><use href="#i-circle-question-mark"/></svg> 기출 외 예상 추가질문</h2>
+  <p class="muted" style="margin-bottom:12px">기출에는 없지만 해사고 면접에서 나올 만한 질문이에요. 특히 <b>성적 질문</b>은 미리 꼭 준비하세요.</p>
+  <div id="extraList"></div>
+</section>
+
+<!-- KNOWLEDGE -->
+<section class="page" id="know">
+  <h2><svg class="ic" aria-hidden="true"><use href="#i-book-open"/></svg> 면접 배경지식</h2>
+  <div class="card">
+    <h3><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg> 용어 플래시카드</h3>
+    <p class="muted" style="font-size:14px;margin-bottom:10px">카드를 눌러 뒤집어 보세요. 5·12·13번 답변에 한두 개 넣으면 "준비한 학생"으로 보여요.</p>
+    <div class="flash-wrap"><div class="flash" id="flash"><div class="side front"><b id="fFront"></b><span style="opacity:.7;margin-top:10px;font-size:13px">눌러서 뒤집기</span></div><div class="side back" id="fBack"></div></div></div>
+    <div class="flash-nav"><button class="btn" id="fPrev"><svg class="ic" aria-hidden="true"><use href="#i-chevron-left"/></svg> 이전</button><span class="muted" id="fCount"></span><button class="btn" id="fNext">다음 <svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button></div>
+  </div>
+
+  <div class="card">
+    <h3><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 항해과 vs 기관과 한눈에 보기</h3>
+    <div class="tbl-wrap"><table>
+      <tr><th></th><th>항해과</th><th>기관과</th></tr>
+      <tr><td><b>배에서 하는 일</b></td><td>배를 안전하게 운항(조종·당직), 화물 관리, 항로 계획</td><td>엔진·발전기·펌프 등 기계를 운전하고 정비</td></tr>
+      <tr><td><b>주로 배우는 것</b></td><td>항해술, 선박운용, 해사법규, 기상·해양, 전자해도, 해사영어</td><td>선박 디젤기관, 보일러·보조기계, 전기·전자, 냉동공조, 용접·공작</td></tr>
+      <tr><td><b>배 위 직급</b></td><td>3등 항해사 → 2등 → 1등 항해사 → <b>선장</b></td><td>3등 기관사 → 2등 → 1등 기관사 → <b>기관장</b></td></tr>
+      <tr><td><b>어울리는 성향</b></td><td>상황 판단, 책임감, 지도·지리에 관심</td><td>기계 만지기, 원리 탐구, 꼼꼼함</td></tr>
+    </table></div>
+    <p class="muted" style="font-size:13px;margin-top:8px">※ 학과 명칭·세부 교육과정은 학교 홈페이지 최신 모집요강으로 꼭 한 번 확인하세요.</p>
+  </div>
+
+  <div class="card">
+    <h3><svg class="ic" aria-hidden="true"><use href="#i-newspaper"/></svg> 2026년 해운·해양안전 핵심 이슈 (5·13번용)</h3>
+    <div class="term"><b>① 해운 탈탄소(친환경) 규제</b><br>국제해사기구(IMO)는 2050년 국제해운 탄소중립을 목표로 하고, 연료의 온실가스 기준을 못 맞춘 선박에 요금을 부과하는 '넷제로 프레임워크'를 추진 중이에요. 2025년 10월 회의에서 최종 채택이 미뤄졌지만 방향은 바뀌지 않았어요. 그래서 LNG·메탄올·암모니아·수소 같은 새 연료를 쓰는 배가 늘고 있어요.</div>
+    <div class="term"><b>② 해양사고 증가</b><br>해양교통안전공단 국정감사 자료 기준, 해양사고는 2021년 2,720건 → 2025년 3,513건으로 약 29% 늘었고, 사고 유형 중 <b>기관 손상</b>이 가장 많았어요. 사고 전에 위험을 예측·점검하는 예방 중심 관리가 강조되고 있어요.</div>
+    <div class="term"><b>③ 선박 사이버보안·GPS 교란</b><br>위성통신이 늘면서 선박을 노린 사이버 위협도 커졌어요. 중동 분쟁 지역 해협에서는 GPS 전파 교란으로 많은 선박이 피해를 입었고, 해양수산부는 2026년 처음으로 해사 사이버안전 인력양성 교육을 열었어요.</div>
+    <div class="term"><b>④ 자율운항선박·스마트 선박</b><br>AI·센서로 스스로 운항하는 선박 기술이 개발 중이에요. 그래도 비상 상황 판단과 원격 감시는 사람(해기사)이 맡아야 해서 <b>디지털을 다룰 줄 아는 해기사</b>가 필요해져요.</div>
+    <div class="term"><b>⑤ 해기사 인력 부족</b><br>한국인 선원은 줄고 외국인 선원 비율은 크게 늘었어요. 젊은 해기사 양성이 국가적 과제 → <b>해사고가 존재하는 이유</b>와 연결해서 말할 수 있어요.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>기출 문항 출처: <a href="https://blog.naver.com/mjend7713/223630592239" target="_blank" rel="noopener">한국스피치학원 블로그 (2025학년도 부산해사고 기출)</a></p>
+  <p class="noprint" style="margin-top:6px">아이콘: <a href="https://lucide.dev" target="_blank" rel="noopener">Lucide</a> (ISC 라이선스) · 작성한 답변은 이 기기의 브라우저에만 저장돼요. · <button class="btn" id="printBtn" style="padding:4px 10px;font-size:13px"><svg class="ic" aria-hidden="true"><use href="#i-printer"/></svg> 전체 인쇄</button> <button class="btn" id="resetBtn" style="padding:4px 10px;font-size:13px"><svg class="ic" aria-hidden="true"><use href="#i-rotate-ccw"/></svg> 진도 초기화</button></p>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===================== DATA ===================== */
+const CATS = {motive:"지원동기·진로", study:"학업", person:"인성", issue:"시사·전문지식"};
+
+const Q = [
+{ id:1, cat:"motive", q:"왜 부산해사고에 지원하게 되었나요?",
+  intent:"정말 이 학교에 오고 싶은지(진정성), 학교에 대해 알아보고 왔는지를 봐요. 거의 모든 학생이 받는 첫 질문이라 첫인상이 결정돼요.",
+  points:["계기(내 경험) → 학교의 특징 → 나의 목표 순서로","학교 특징: 해기사를 길러내는 국립 해사고, 실무·승선실습 중심, 기숙사 공동체 생활","'학비 무료·취업'은 말해도 되지만 중심 이유로 쓰지 않기"],
+  answer:"저는 큰 배를 직접 운항하는 해기사가 되고 싶어서 부산해사고에 지원했습니다. [계기: 예) 가족과 부산항대교를 지나며 컨테이너선이 줄지어 들어오는 모습을 보고, 저 배를 움직이는 사람이 되고 싶다는 생각을 했습니다.] 그 뒤 해기사가 되는 방법을 찾아보다가, 부산해사고가 고등학교 때부터 전공 이론과 승선실습을 함께 배우며 해기사를 체계적으로 길러내는 학교라는 것을 알게 되었습니다. 또 기숙사에서 규칙을 지키며 함께 생활하는 것이 실제 선박 생활과 닮아 있어 저를 단단하게 만들어 줄 것이라 생각했습니다. 입학하면 성실하게 배워 믿고 맡길 수 있는 해기사로 성장하겠습니다.",
+  tail:["부산해사고에 대해 알고 있는 것을 말해 볼래요?","학교 설명회나 홈페이지에서 인상 깊었던 점은?","일반고에 가서 해양대학교에 가는 방법도 있는데, 왜 해사고인가요?"],
+  avoid:["\"부모님이 가라고 하셔서요\"","\"학비가 안 들어서요\" (이것만 말하는 경우)","\"그냥 바다가 좋아서요\" (구체적 이유 없음)"],
+  related:"6번(지원동기)과 같은 질문이에요. 6번에서는 '왜 이 학교여야 하는지'를 더 강조해요." },
+
+{ id:2, cat:"study", q:"해사고에 입학하면 어떤 것을 배우고 싶나요?",
+  intent:"학과(항해·기관)에 대한 이해와 배우려는 의지가 있는지 확인해요.",
+  points:["희망 학과를 먼저 밝히기 (항해과/기관과)","그 학과에서 배우는 과목 1~2개를 구체적으로","전공 + 해사영어(외국인 선원과 소통) 함께 말하면 좋아요"],
+  answer:"저는 [항해과/기관과]에 진학해 [항해과: 항해술과 선박운용 / 기관과: 선박 디젤기관과 전기·전자]를 깊이 배우고 싶습니다. [항해과 예) 배가 바다에서 정확한 위치를 찾고 안전한 항로를 정하는 방법이 가장 궁금하기 때문입니다. / 기관과 예) 수만 톤의 배를 움직이는 엔진이 어떻게 작동하는지 직접 만지며 배우고 싶기 때문입니다.] 그리고 해사영어도 열심히 배우고 싶습니다. 배에서는 외국인 선원들과 함께 일하고 다른 나라 항구와도 교신해야 하기 때문에, 영어로 정확히 소통하는 것이 안전과 직결된다고 생각합니다. 이론은 실습과 연결해서 이해하고, 승선실습 때 배운 것을 직접 써먹을 수 있도록 준비하겠습니다.",
+  tail:["항해과와 기관과의 차이를 알고 있나요?","희망 학과에 떨어지면 다른 학과도 괜찮나요?","영어 실력은 어느 정도인가요?"],
+  avoid:["\"들어가서 정하겠습니다\"","과목 이름을 하나도 말하지 못하는 것"],
+  related:"8번(학업계획)과 이어져요. 2번은 '무엇을', 8번은 '어떻게·언제'를 말한다고 생각하세요." },
+
+{ id:3, cat:"motive", q:"졸업 후 진로 계획은 무엇인가요?",
+  intent:"꿈이 막연한지, 단계별로 그려져 있는지를 봐요. 해사고의 목적(해기사 양성)과 맞는지도 확인해요.",
+  points:["단기 → 중기 → 장기로 나눠 말하기","단기: 해기사 면허 취득 후 상선 승선 (3등 항해사/기관사)","장기: 선장/기관장, 또는 경력을 살린 육상 분야(해운회사, 해양안전 기관 등)"],
+  answer:"저의 진로 계획은 세 단계입니다. 먼저 졸업 후 해기사 면허를 취득해 상선에 [3등 항해사/3등 기관사]로 승선하는 것입니다. [남학생이라면 예) 승선근무예비역으로 병역도 해결하면서 현장 경험을 쌓겠습니다.] 다음으로 배 위에서 경력을 쌓고 꾸준히 공부해 상위 면허를 따서, 최종적으로는 [선장/기관장]이 되고 싶습니다. 먼 미래에는 바다에서 쌓은 경험을 바탕으로 [예) 해운회사의 선박 관리 업무나 후배 해기사를 가르치는 일]에도 도전하고 싶습니다. 이 모든 시작이 부산해사고라고 생각합니다.",
+  tail:["배를 오래 타면 가족과 떨어져 지내야 하는데 괜찮나요?","대학 진학 생각은 없나요?","승선근무예비역이 뭔지 알아요?"],
+  avoid:["\"해기사 하다가 돈 모아서 다른 일 할 거예요\"","해양과 관계없는 진로만 말하기"],
+  related:"9번(해기사로서의 목표)과 이어져요." },
+
+{ id:4, cat:"motive", q:"해양 분야에 관심을 가지게 된 계기가 있나요?",
+  intent:"관심이 진짜인지 확인하는 질문이에요. 거창할 필요 없이 '구체적인 장면'이 있으면 돼요.",
+  points:["작은 경험도 OK: 여행, 다큐멘터리, 가족·지인의 직업, 진로체험, 책","그때 본 장면 + 느낀 점 + 그 뒤에 내가 한 행동(찾아본 것)","'그 뒤에 한 행동'이 있으면 진정성이 확 올라가요"],
+  answer:"제가 해양 분야에 관심을 갖게 된 계기는 [예) 중학교 2학년 진로체험 때 다녀온 국립해양박물관 / 가족 여행 때 탄 여객선 / 원양어선을 타셨던 삼촌의 이야기]입니다. [그때 본 장면 예) 조타실을 견학하면서 항해사님이 여러 화면을 보며 배를 조종하는 모습이 정말 멋있었습니다.] 그 후로 [행동 예) 유튜브에서 항해사 브이로그를 찾아보고, 해기사가 되는 방법을 직접 조사했습니다.] 그러면서 바다 위에서 일하는 것이 힘들지만, 우리나라 수출입의 대부분을 책임지는 중요한 일이라는 것을 알게 되어 더 확실한 꿈이 되었습니다.",
+  tail:["그 경험에서 가장 기억에 남는 것은?","해기사 일의 힘든 점은 무엇이라고 생각해요?","그 이후로 해양 관련해 따로 해 본 활동이 있나요?"],
+  avoid:["없는 경험을 지어내기 (꼬리질문에서 바로 들통나요)","\"원래부터 좋아했어요\"로 끝내기"],
+  related:"이 경험을 1번 지원동기의 '계기'에 그대로 써도 돼요." },
+
+{ id:5, cat:"issue", q:"최근 해운 업계의 주요 이슈는 무엇이라고 생각하나요?",
+  intent:"해운에 관심을 갖고 뉴스를 찾아봤는지 봐요. 정답보다 '이슈 1개 + 내 생각 + 해기사와의 연결'이 중요해요.",
+  points:["이슈는 1개만 확실하게 (추천: 친환경 연료/탄소 규제)","무슨 일인지 → 왜 중요한지 → 해기사로서 나는 어떻게 준비할지","숫자나 기관 이름(IMO)을 하나 넣으면 신뢰도 UP"],
+  answer:"저는 해운 업계의 가장 큰 이슈가 친환경 전환이라고 생각합니다. 국제해사기구, IMO는 2050년까지 국제 해운의 탄소 배출을 실질적으로 0으로 만드는 목표를 세웠고, 기준을 못 맞춘 선박에 비용을 물리는 제도를 논의하고 있습니다. 그래서 기존 벙커C유 대신 LNG, 메탄올, 암모니아 같은 새로운 연료를 쓰는 배가 늘어나고 있습니다. 이런 연료들은 다루는 방법이 다르고 위험성도 있어서, 앞으로의 해기사는 새로운 연료와 장비를 안전하게 다룰 줄 알아야 한다고 생각합니다. 저도 입학하면 기본기를 탄탄히 익히고, 친환경 선박 기술에도 관심을 갖는 해기사가 되겠습니다.",
+  tail:["IMO가 무엇인지 알아요?","친환경 연료 중 하나만 설명해 볼래요?","다른 이슈도 알고 있는 게 있나요? (→ 자율운항선박, 해기사 인력 부족, 사이버보안 중 하나)"],
+  avoid:["\"잘 모르겠습니다\"로 끝내기","너무 어려운 용어를 외워서 설명을 못 하는 것"],
+  related:"배경지식 탭의 '2026년 핵심 이슈'를 꼭 읽어 보세요. 다른 이슈로 바꿔 말해도 같은 틀을 쓰면 돼요." },
+
+{ id:6, cat:"motive", q:"부산해사고등학교 지원동기",
+  intent:"1번과 같은 질문이지만, 면접관이 '왜 하필 이 학교인지'를 더 깊게 확인할 때가 많아요.",
+  points:["1번과 같은 내용이되, '학교만의 장점'을 더 강조","부산 = 우리나라 최대 항만도시, 해운·해양 기관과 기업이 모여 있는 곳","실습 중심 교육, 승선실습, 기숙사 생활을 통한 공동체·규율"],
+  answer:"제가 부산해사고에 지원한 가장 큰 이유는 해기사라는 꿈을 가장 빠르고 확실하게 이룰 수 있는 학교이기 때문입니다. 부산해사고는 해기사 양성을 목표로 전공 이론, 실습, 승선실습을 3년 동안 체계적으로 배울 수 있습니다. 특히 부산은 우리나라 최대의 항만 도시라 바다와 배를 가까이에서 보고 배울 수 있다는 점이 큰 장점이라고 생각합니다. 또 기숙사 생활을 하면서 시간 관리와 규칙, 동료와의 협동을 몸으로 익힐 수 있는데, 이것은 배 위에서 꼭 필요한 능력입니다. [나만의 이유 예) 학교 설명회에서 선배님이 승선실습 경험을 이야기해 주신 것이 결정적이었습니다.] 이곳에서 꼭 제 꿈을 이루고 싶습니다.",
+  tail:["다른 해사고(인천해사고)와 비교해서 왜 부산인가요?","기숙사 생활은 해 본 적 있나요? 잘할 자신 있나요?","만약 떨어진다면 어떻게 할 건가요?"],
+  avoid:["1번 답변을 그대로 반복하기 (같은 질문이 오면 '앞서 말씀드린 것에 더해' 하고 새 내용 추가)"],
+  related:"1번과 짝. 둘 다 준비해 두면 어떤 식으로 물어봐도 대응할 수 있어요." },
+
+{ id:7, cat:"person", q:"본인의 장단점을 말해 보세요.",
+  intent:"자신을 객관적으로 아는지, 단점을 고치려는 노력을 하는지 봐요. 단점을 어떻게 말하느냐가 핵심이에요.",
+  points:["장점: 해기사와 관련된 것(성실, 책임감, 끈기, 협동) + 증거가 되는 경험 1개","단점: 진짜 단점이지만 치명적이지 않은 것 + 고치려는 구체적 노력","단점 선택 금지: 시간 약속 안 지킴, 체력 약함, 멀미, 규칙 싫어함"],
+  answer:"제 장점은 한 번 맡은 일은 끝까지 해내는 책임감입니다. [경험 예) 중학교 2년 동안 학급 [환경부장/도서부]를 맡으면서 한 번도 빠지지 않고 [분리수거 정리]를 했고, 선생님께 칭찬을 받은 적도 있습니다.] 반면 단점은 [예) 처음 보는 사람 앞에서 긴장을 많이 하는 것]입니다. 그래서 [노력 예) 수업 시간에 일부러 발표를 자주 하려고 노력했고, 지금은 처음보다 훨씬 자연스럽게 말할 수 있게 되었습니다.] 해사고에 가서도 장점은 더 키우고, 단점은 계속 고쳐 나가겠습니다.",
+  tail:["그 장점이 해기사에게 왜 중요하다고 생각해요?","단점 때문에 실제로 손해 본 경험이 있나요?","친구들은 당신을 어떤 사람이라고 하나요?"],
+  avoid:["\"단점이 없습니다\"","\"완벽주의가 단점이에요\" (외운 티가 남)","장점을 말하면서 증거 경험이 없는 것"],
+  related:"10번·11번의 경험과 장점이 이어지면 일관성이 생겨요." },
+
+{ id:8, cat:"study", q:"학업 계획을 말해 보세요.",
+  intent:"3년 동안 무엇을 어떻게 공부할지 계획이 있는지 봐요. 중학교 성적이 아주 높지 않다면, 여기서 '부족한 부분 보완 계획'을 말하는 것이 좋아요.",
+  points:["학년별로 나누면 정리돼 보여요 (1학년 기초 → 2학년 전공·자격 → 3학년 승선실습·면허)","부족한 과목(수학·영어 등)을 솔직히 말하고 보완 방법 제시","구체적 방법: 매일 영어 단어, 복습 노트, 선배·선생님께 질문"],
+  answer:"저는 3년 동안 단계별로 공부하겠습니다. 1학년 때는 기초를 다지겠습니다. 솔직히 저는 [수학/영어]가 약한 편인데, 전공 과목을 이해하려면 꼭 필요하기 때문에 [방법 예) 매일 영어 단어 20개와 그날 배운 내용 복습]을 습관으로 만들겠습니다. 2학년 때는 [항해/기관] 전공 과목에 집중하고, 실습 시간에 배운 것을 노트에 정리해 제 것으로 만들겠습니다. 3학년 때는 승선실습에서 배운 것을 현장에 적용하고 해기사 면허 시험을 확실히 준비하겠습니다. 모르는 것은 그냥 넘어가지 않고 선생님과 선배님께 끝까지 물어보는 학생이 되겠습니다.",
+  tail:["중학교 성적이 높지 않은데, 전공 공부를 따라갈 수 있을까요?","지금까지 공부하면서 가장 잘 맞았던 공부 방법은?","방과 후 기숙사에서는 어떻게 공부할 건가요?"],
+  avoid:["\"열심히 하겠습니다\"만 반복하기","성적 이야기를 피하거나 핑계 대기"],
+  related:"2번과 짝. 예상 추가질문의 '성적' 질문도 함께 준비하세요." },
+
+{ id:9, cat:"motive", q:"해기사로서 본인의 목표는 무엇인가요?",
+  intent:"해기사라는 직업을 이해하고 있는지, 어떤 해기사가 되고 싶은지 '가치관'을 봐요.",
+  points:["직급 목표(선장/기관장) + 어떤 해기사인지(가치관) 둘 다","핵심 가치: 안전, 책임감, 팀워크, 새로운 기술 배우기","한 문장 슬로건을 만들어 두면 기억에 남아요"],
+  answer:"제 목표는 '선원 모두가 믿고 따를 수 있는 [선장/기관장]'이 되는 것입니다. 해기사는 수많은 화물과 함께 일하는 선원들의 안전을 책임지는 사람이라고 생각합니다. 그래서 저는 어떤 상황에서도 안전 수칙을 먼저 지키는 해기사가 되고 싶습니다. 또 요즘은 친환경 연료와 자동화 장비가 빠르게 바뀌고 있기 때문에, 계속 공부해서 새로운 기술도 다룰 줄 아는 해기사가 되겠습니다. 마지막으로 국적이 다른 선원들과도 잘 소통해 한 팀으로 만드는 리더가 되는 것이 저의 목표입니다.",
+  tail:["좋은 선장(기관장)의 조건은 뭐라고 생각해요?","배에서 상사의 지시가 틀렸다고 생각되면 어떻게 할 건가요?","외국인 선원과 갈등이 생기면?"],
+  avoid:["\"돈을 많이 벌고 싶어요\"만 말하기","목표가 너무 막연한 것 (\"훌륭한 해기사\")"],
+  related:"3번(진로)과 짝. 3번은 '경로', 9번은 '어떤 사람이 될지'에 초점." },
+
+{ id:10, cat:"person", q:"학교생활을 하면서 가장 힘들었던 경험은 무엇인가요?",
+  intent:"힘든 상황에서 포기하지 않고 극복하는 힘(회복력)이 있는지 봐요. 배 위·기숙사 생활은 힘든 일이 많기 때문이에요.",
+  points:["상황 → 내가 한 행동 → 결과 → 배운 점 (STAR 구조)","'극복 과정'이 70%, '힘든 이야기'는 30%","성적이 안 올라 힘들었던 경험도 좋은 소재 (노력 과정이 있다면)"],
+  answer:"가장 힘들었던 경험은 [예) 중학교 2학년 때 열심히 준비한 시험에서 성적이 오히려 떨어졌을 때]입니다. 그때는 노력해도 안 된다는 생각에 많이 속상했습니다. 하지만 포기하지 않고 [행동 예) 틀린 문제를 다시 분석해 보니 시간을 많이 썼는데 복습은 하지 않았다는 것을 알게 되었습니다. 그래서 공부 방법을 바꿔 매일 그날 배운 것을 10분씩 복습했습니다.] 그 결과 [결과 예) 다음 시험에서 수학 점수가 15점 올랐습니다.] 이 경험으로 힘들 때 원인을 찾고 방법을 바꾸면 결국 해낼 수 있다는 것을 배웠습니다. 해사고 생활이 힘들어도 이렇게 이겨내겠습니다.",
+  tail:["그때 누구에게 도움을 받았나요?","지금 다시 그 상황이 오면 어떻게 할 건가요?","기숙사 생활이 힘들어 그만두고 싶어지면?"],
+  avoid:["극복 없이 힘든 이야기로만 끝내기","남 탓하기 (선생님, 친구 탓)","너무 개인적·가정사적인 이야기 (말하기 불편하면 학교 이야기로)"],
+  related:"7번 장점(책임감·끈기)의 증거로도 쓸 수 있어요." },
+
+{ id:11, cat:"person", q:"갈등을 해결한 경험을 말해 보세요.",
+  intent:"배는 좁은 공간에서 오래 함께 지내는 곳이라 '협동과 소통'이 매우 중요해요. 갈등 상황에서 어떻게 행동하는 사람인지 봐요.",
+  points:["모둠 활동, 수행평가, 체육대회, 동아리 등 학교 소재가 무난","상대 입장을 먼저 듣고 → 대화로 → 함께 해결책을 찾은 과정","배운 점을 '배 위의 팀워크'와 연결해 마무리"],
+  answer:"[예) 2학년 과학 모둠 수행평가] 때 역할 분담 문제로 갈등이 있었습니다. 한 친구가 맡은 부분을 계속 미뤄서 다른 친구들이 화가 난 상황이었습니다. 저는 먼저 그 친구에게 따로 이유를 물어봤는데, [이유 예) 맡은 부분이 어려워서 어떻게 해야 할지 몰랐다]는 것을 알게 되었습니다. 그래서 모둠원들에게 상황을 설명하고, 그 친구가 잘하는 [예) 자료 그리기]로 역할을 바꾸자고 제안했습니다. 결국 모두 기한 안에 과제를 마쳤고 좋은 점수도 받았습니다. 이 경험으로 갈등이 생기면 먼저 상대의 이야기를 듣는 것이 중요하다는 것을 배웠습니다. 배 위에서도 동료들과 이렇게 소통하겠습니다.",
+  tail:["만약 대화로도 해결이 안 됐다면 어떻게 했을까요?","기숙사 룸메이트와 생활 습관이 안 맞으면?","당신이 갈등의 원인이었던 적은 없나요?"],
+  avoid:["\"저는 갈등이 생긴 적이 없습니다\"","내가 다 옳고 상대가 다 틀린 이야기","선생님께 일러서 해결했다는 이야기만 하기"],
+  related:"12번 '협동심'의 근거로 연결할 수 있어요." },
+
+{ id:12, cat:"issue", q:"해기사로서 필요한 역량이나 덕목은 무엇이라고 생각하나요?",
+  intent:"해기사라는 직업의 특성을 이해하고 있는지, 그리고 본인이 그 역량을 갖추고 있는지 봐요.",
+  points:["2~3개만 골라서 '왜 필요한지' 이유와 함께","추천 조합: 책임감(안전) · 협동심(팀워크) · 인내심/체력(긴 항해)","마지막에 '저는 그중 ○○을 갖췄고, ○○은 키우겠다'로 나와 연결"],
+  answer:"저는 해기사에게 가장 필요한 덕목이 책임감과 협동심이라고 생각합니다. 첫째, 책임감입니다. 해기사의 작은 실수가 큰 사고로 이어질 수 있기 때문에, 당직이나 점검 같은 기본 업무를 매번 정확하게 지키는 책임감이 꼭 필요합니다. 둘째, 협동심입니다. 배는 바다 한가운데에서 여러 나라의 선원들이 몇 달씩 함께 생활하는 곳이라, 서로 돕고 소통하지 않으면 안전하게 항해할 수 없습니다. 저는 [근거 예) 2년 동안 학급 부장을 하며 맡은 일을 끝까지 해낸] 책임감은 갖추고 있다고 생각하고, 협동심과 영어 소통 능력은 해사고의 기숙사 생활과 수업을 통해 더 키우겠습니다.",
+  tail:["그 중 가장 중요한 하나를 고른다면?","본인에게 가장 부족한 역량은?","체력 관리는 어떻게 하고 있나요?"],
+  avoid:["덕목을 5개 이상 나열만 하기","나와 연결하지 않고 일반론으로 끝내기"],
+  related:"7번 장점과 겹치게 고르면 답변이 일관돼 보여요." },
+
+{ id:13, cat:"issue", q:"해양 안전과 관련된 이슈와 본인의 견해를 말해 보세요.",
+  intent:"해양 안전에 대한 관심과 '안전 의식'을 봐요. 해기사에게 가장 중요한 가치라 비중이 큰 질문이에요.",
+  points:["이슈 1개: 해양사고 증가(기관 손상이 가장 많음) 추천","원인 → 내 견해(기본 수칙·점검·훈련의 중요성) → 해기사로서 다짐","세월호 등 큰 사고를 언급할 땐 차분하고 예의 있게"],
+  answer:"최근 해양 안전에서 가장 걱정되는 이슈는 해양사고가 계속 늘고 있다는 점입니다. 해양교통안전공단 자료에 따르면 해양사고가 2021년 약 2,700건에서 2025년 약 3,500건으로 30% 가까이 늘었고, 그중 기관 고장이나 손상으로 인한 사고가 가장 많았습니다. 저는 이런 사고의 상당수가 평소에 점검을 꼼꼼히 하고, 기본 안전 수칙을 지켰다면 막을 수 있었다고 생각합니다. 그래서 해기사에게 가장 중요한 것은 화려한 기술보다 '당연한 것을 매번 지키는 습관'이라고 생각합니다. 저는 해사고에서 안전 교육과 비상 훈련을 실제 상황처럼 진지하게 받고, 장비 점검을 습관으로 만드는 해기사가 되겠습니다.",
+  tail:["해양사고가 일어나면 해기사는 무엇부터 해야 할까요?","선박 사이버 공격(GPS 교란)에 대해 들어 봤나요?","구명조끼 착용을 귀찮아하는 사람에게 어떻게 말할 건가요?"],
+  avoid:["특정 사고를 가볍게 이야기하거나 누군가를 비난하기","통계를 틀리게 외워서 말하기 (헷갈리면 '크게 늘었다'로만 말해도 OK)"],
+  related:"배경지식 탭의 '해양사고 증가', '사이버보안' 항목 참고." }
+];
+
+const EXTRA = [
+ {q:"중학교 성적이 높지 않은 편인데, 해사고 공부를 잘 따라갈 수 있을까요?", a:"성적을 인정하고 → 이유는 짧게 → 지금 노력 중인 것 → 앞으로의 계획 순서로 말해요.<br><br><i>\"솔직히 성적이 뛰어난 편은 아닙니다. 그동안은 목표 없이 공부했는데, 해기사라는 꿈이 생긴 뒤로는 [예) 수학 문제집을 다시 풀고 매일 영어 단어를 외우고] 있습니다. 해사고에서는 공부하는 이유가 분명하기 때문에 지금보다 훨씬 열심히 할 수 있다고 확신합니다.\"</i>", tip:"변명하거나 당황하지 않는 태도 자체가 점수예요."},
+ {q:"기숙사 생활에서 규칙이 엄격한데 괜찮겠어요?", a:"\"규칙은 배 위의 안전과 같다\"는 관점으로 답해요. 지금 지키고 있는 생활 습관(기상 시간, 휴대폰 사용 조절 등)을 예로 들면 좋아요.", tip:"\"괜찮습니다!\"만 말하지 말고 근거 1개."},
+ {q:"멀미를 하나요? 배를 타 본 적이 있나요?", a:"솔직하게 말하되 대비책을 함께. <i>\"[배를 타 본 경험]이 있고 크게 힘들지 않았습니다.\"</i> 또는 <i>\"아직 큰 배는 타 보지 않았지만, 실습을 통해 적응하고 체력 관리로 대비하겠습니다.\"</i>", tip:"멀미가 심하다고 단정 짓는 말은 피하세요."},
+ {q:"체력 관리는 어떻게 하고 있나요?", a:"구체적인 운동 1개 + 빈도. <i>\"매일 저녁 30분 줄넘기를 하고, 주말에는 [축구/수영]을 합니다.\"</i> 지금 안 하고 있다면 오늘부터 시작해서 사실로 만드세요!", tip:""},
+ {q:"부모님은 해사고 진학에 대해 어떻게 생각하시나요?", a:"부모님과 대화해 본 내용을 바탕으로. 걱정하셨다면 <i>\"처음엔 배 생활을 걱정하셨지만, 제가 조사한 내용을 설명드리고 지금은 응원해 주십니다.\"</i>", tip:"면접 전에 실제로 부모님과 이야기해 보세요."},
+ {q:"배에서 몇 달씩 가족, 친구와 떨어져 지내야 하는데 괜찮나요?", a:"어려움을 인정 + 극복 방법. <i>\"쉽지는 않겠지만, 기숙사 생활을 통해 미리 적응하고 동료들과 좋은 관계를 만들며 이겨내겠습니다.\"</i>", tip:""},
+ {q:"해기사가 되는 것 말고 다른 꿈을 생각해 본 적 있나요?", a:"<i>\"[이전 꿈]을 생각한 적도 있지만, [계기] 이후로 해기사가 저에게 가장 맞는 길이라고 확신하게 되었습니다.\"</i> 지금 꿈이 흔들리지 않는다는 것이 핵심.", tip:""},
+ {q:"존경하는 인물이 있나요?", a:"해양 관련 인물이면 좋아요. 예) <b>장보고</b>(해상무역 개척), <b>이순신</b>(바다를 지킨 책임감), 또는 주변의 해기사·가족. 인물 + 배우고 싶은 점 1개.", tip:"인물에 대한 꼬리질문이 올 수 있으니 기본 사실은 알아 두세요."},
+ {q:"최근에 읽은 책이나 본 영상 중 기억에 남는 것은?", a:"해양·직업·도전과 관련된 것이면 좋아요. 제목 + 한 줄 내용 + 느낀 점 + 나와의 연결.", tip:"실제로 읽은/본 것만 말하세요."},
+ {q:"마지막으로 하고 싶은 말이 있나요?", a:"15~20초 분량으로 미리 외워 두는 유일한 답변이에요.<br><br><i>\"오늘 면접을 준비하면서 해기사라는 꿈이 더 분명해졌습니다. 부산해사고에 입학한다면 누구보다 성실하게 배워, 3년 뒤 학교를 빛내는 해기사가 되겠습니다. 감사합니다.\"</i>", tip:"\"없습니다\"는 절대 금지!"}
+];
+
+const CARDS = [
+ {t:"해기사", d:"선박직원법에 따라 해기사 면허를 받은 사람. 배의 간부 선원으로 항해사·기관사 등이 있어요."},
+ {t:"항해사 / 선장", d:"배의 운항(조종·당직), 항로 계획, 화물 관리를 맡아요. 3등 → 2등 → 1등 항해사를 거쳐 배 전체를 책임지는 선장이 돼요."},
+ {t:"기관사 / 기관장", d:"엔진, 발전기, 펌프 등 배의 기계를 운전·정비해요. 기관실의 최고 책임자가 기관장이에요."},
+ {t:"승선실습", d:"실제 배에 타서 배우는 실습. 해기 교육에서 아주 중요하며, 승무 경력으로 인정돼 해기사 면허 취득과 연결돼요."},
+ {t:"승선근무예비역", d:"해기사 면허를 가진 사람이 일정 기간 상선 등에 승선해 근무하면 병역을 대신할 수 있는 제도예요. (남학생 진로 질문에서 자주 나와요)"},
+ {t:"IMO", d:"국제해사기구. UN 산하 기구로 선박 안전, 해양 오염 방지 등 해운의 국제 규칙을 만들어요. 본부는 런던."},
+ {t:"넷제로 프레임워크", d:"IMO가 추진하는 해운 탄소 규제. 선박 연료의 온실가스 기준을 못 맞추면 비용을 내고, 잘 지키면 혜택을 받는 구조예요. 2025년 10월 최종 채택이 연기됐어요."},
+ {t:"친환경 선박 연료", d:"벙커C유를 대신할 연료: LNG(액화천연가스), 메탄올, 암모니아, 수소 등. 각각 장단점과 안전 관리 방법이 달라요."},
+ {t:"자율운항선박", d:"AI·센서·통신 기술로 사람의 개입을 줄이고 스스로 운항하는 선박. 그래도 감시와 비상 대응은 해기사가 맡아요."},
+ {t:"SOLAS 협약", d:"해상인명안전협약. 타이타닉호 사고를 계기로 만들어진, 선박 안전에 관한 가장 기본적인 국제 협약이에요."},
+ {t:"STCW 협약", d:"선원의 훈련·자격증명·당직 근무에 관한 국제 협약. 해기사 교육의 국제 기준이에요."},
+ {t:"당직(Watch)", d:"배는 24시간 움직이기 때문에 항해사·기관사가 시간을 나눠 조타실·기관실을 지키는 근무예요. 책임감이 가장 중요한 이유!"},
+ {t:"해사영어 (SMCP)", d:"IMO 표준 해사통신영어. 배와 배, 배와 항구 사이에서 오해 없이 소통하기 위한 정해진 영어 표현이에요."},
+ {t:"GPS 교란·선박 사이버보안", d:"위성항법 신호를 방해하거나 선박 시스템을 해킹하는 위협. 최근 크게 늘어 해기사의 새로운 안전 과제가 되었어요."}
+];
+
+const CHECKS = ["첫 문장에서 질문에 대한 결론을 바로 말했다","나만의 구체적인 경험(언제·무엇을)을 넣었다","해사고 / 해기사와 연결해서 마무리했다","40초~1분 30초 안에 끝냈다","\"음…\", \"어…\"를 3번 이하로 했다","끝까지 \"~습니다\" 말투를 유지했다"];
+
+/* ===================== STORAGE ===================== */
+const store = {
+  get(k,d){try{const v=localStorage.getItem('bsmhs_'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+  set(k,v){try{localStorage.setItem('bsmhs_'+k,JSON.stringify(v))}catch(e){}}
+};
+let done = store.get('done',{});
+
+/* ===================== HELPERS ===================== */
+const $ = s=>document.querySelector(s);
+const I = n=>'<svg class="ic" aria-hidden="true"><use href="#i-'+n+'"/></svg>';
+const esc = s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const hl = s=>esc(s).replace(/\[([^\]]+)\]/g,'<span class="ph">$1</span>');
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),1800)}
+function speak(text){
+  try{ if(!('speechSynthesis' in window)){toast('이 브라우저는 음성 읽기를 지원하지 않아요');return}
+    speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(text); u.lang='ko-KR'; u.rate=.95; speechSynthesis.speak(u);
+  }catch(e){}
+}
+function fmt(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+/* ===================== THEME ===================== */
+(function(){const t=store.get('theme',null);if(t)document.documentElement.dataset.theme=t})();
+$('#themeBtn').onclick=()=>{
+  const cur=document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  const nx=cur==='dark'?'light':'dark'; document.documentElement.dataset.theme=nx; store.set('theme',nx);
+};
+
+/* ===================== TABS ===================== */
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===b.dataset.page));
+  window.scrollTo({top:document.querySelector('nav').offsetTop,behavior:'smooth'});
+});
+
+/* ===================== PROGRESS ===================== */
+function updateProgress(){
+  const n=Q.filter(q=>done[q.id]).length;
+  $('#progText').innerHTML=n+' / '+Q.length+(n===Q.length?' '+I('party-popper'):'');
+  $('#progBar').style.width=(n/Q.length*100)+'%';
+}
+
+/* ===================== QUESTION LIST ===================== */
+let curFilter='all';
+function renderFilter(){
+  const f=$('#filter');
+  const opts=[['all','전체'],...Object.entries(CATS),['todo','미완료만']];
+  f.innerHTML=opts.map(([k,v])=>`<button class="chip ${k===curFilter?'active':''}" data-k="${k}">${v}</button>`).join('');
+  f.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{curFilter=c.dataset.k;renderFilter();renderList()});
+}
+function renderList(){
+  const list=$('#qList');
+  const items=Q.filter(q=>curFilter==='all'||(curFilter==='todo'?!done[q.id]:q.cat===curFilter));
+  list.innerHTML=items.map(q=>`
+  <div class="q-item ${done[q.id]?'done':''}" id="q${q.id}">
+    <button class="q-head" aria-expanded="false">
+      <span class="q-num">${done[q.id]?I('check'):q.id}</span>
+      <span class="q-title">${esc(q.q)}<br><span class="q-cat">#${CATS[q.cat]}</span></span>
+      <span class="q-arrow">${I('chevron-down')}</span>
+    </button>
+    <div class="q-body">
+      <div class="blk"><div class="blk-t">${I('target')} 면접관의 질문 의도</div><div>${esc(q.intent)}</div></div>
+      <div class="blk"><div class="blk-t">${I('pin')} 답변 핵심 포인트</div><ul class="clean">${q.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>
+      <div class="blk"><div class="blk-t">${I('message-square-quote')} 모범 답안 <span class="muted" style="font-weight:400">(노란 칸 = 내 이야기로 바꾸기)</span></div>
+        <div class="answer blur" data-ans>${hl(q.answer)}</div>
+        <div class="btn-row">
+          <button class="btn primary" data-act="reveal">${I('eye')} 답안 보기</button>
+          <button class="btn" data-act="speakQ">${I('volume-2')} 질문 듣기</button>
+          <button class="btn" data-act="speakA">${I('volume-1')} 답안 듣기</button>
+        </div>
+      </div>
+      <div class="blk"><div class="blk-t">${I('pen-line')} 나의 답변 <span class="muted" style="font-weight:400">(자동 저장)</span></div>
+        <textarea class="my" data-my placeholder="모범답안을 참고해 내 경험으로 바꿔 써 보세요. 결론 → 경험 → 다짐!">${esc(store.get('ans_'+q.id,''))}</textarea>
+        <div class="count" data-count></div>
+        <div class="btn-row"><button class="btn" data-act="copy">${I('clipboard-paste')} 모범답안 붙여넣고 고치기</button></div>
+      </div>
+      <div class="blk"><div class="blk-t">${I('repeat')} 예상 꼬리질문</div><ul class="dot tail">${q.tail.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div>
+      <div class="blk"><div class="callout bad"><b>${I('ban')} 이런 답변은 피하세요</b><ul class="dot" style="margin-top:4px">${q.avoid.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div></div>
+      <div class="related">${I('link')} ${esc(q.related)}</div>
+      <div class="btn-row" style="margin-top:14px">
+        <button class="btn ${done[q.id]?'':'good'}" data-act="done">${done[q.id]?I('undo-2')+' 완료 취소':I('circle-check')+' 연습 완료 (소리 내서 3번 읽었어요)'}</button>
+      </div>
+    </div>
+  </div>`).join('') || '<p class="muted">모든 문항을 완료했어요! '+I('party-popper')+'</p>';
+
+  list.querySelectorAll('.q-item').forEach(el=>{
+    const id=+el.id.slice(1), q=Q.find(x=>x.id===id);
+    el.querySelector('.q-head').onclick=()=>{el.classList.toggle('open');el.querySelector('.q-head').setAttribute('aria-expanded',el.classList.contains('open'))};
+    const ta=el.querySelector('[data-my]'), cnt=el.querySelector('[data-count]');
+    const upd=()=>{const n=ta.value.replace(/\s/g,'').length; const sec=Math.round(ta.value.length/5.5); cnt.textContent=`${ta.value.length}자 · 말하면 약 ${sec}초`;};
+    upd();
+    ta.oninput=()=>{store.set('ans_'+id,ta.value);upd()};
+    el.querySelectorAll('[data-act]').forEach(b=>b.onclick=()=>{
+      const a=b.dataset.act;
+      if(a==='reveal'){const ans=el.querySelector('[data-ans]');ans.classList.toggle('blur');b.innerHTML=ans.classList.contains('blur')?I('eye')+' 답안 보기':I('eye-off')+' 답안 가리기'}
+      if(a==='speakQ')speak(q.q);
+      if(a==='speakA')speak(q.answer.replace(/\[[^\]]*\]/g,'').replace(/\s+/g,' '));
+      if(a==='copy'){ if(ta.value.trim() && !confirm('이미 쓴 답변이 있어요. 모범답안으로 덮어쓸까요?'))return; ta.value=q.answer; ta.oninput(); ta.focus(); toast('[ ] 안의 내용을 내 이야기로 바꿔 보세요')}
+      if(a==='done'){done[id]=!done[id];store.set('done',done);updateProgress();
+        const wasOpen=el.classList.contains('open'); renderList(); if(wasOpen){const n=$('#q'+id); if(n)n.classList.add('open')}
+        toast(done[id]?'잘했어요! 진도에 반영됐어요':'완료를 취소했어요');}
+    });
+  });
+}
+
+/* ===================== PRACTICE ===================== */
+let pCur=null, pSec=0, pInt=null;
+function renderPick(){
+  $('#pickRow').innerHTML=Q.map(q=>`<button class="chip" data-id="${q.id}">${q.id}번</button>`).join('');
+  $('#pickRow').querySelectorAll('.chip').forEach(c=>c.onclick=()=>setPractice(Q.find(q=>q.id==c.dataset.id)));
+}
+function setPractice(q){
+  pCur=q; stopTimer(); pSec=0; $('#pTimer').textContent='0:00'; $('#pTimer').className='timer';
+  $('#pQ').textContent=q.id+'. '+q.q; $('#pHintBox').style.display='none'; $('#pStart').innerHTML=I('play')+' 답변 시작';
+  $('#pickRow').querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c.dataset.id==q.id));
+  renderChecks();
+}
+function tick(el,sec){el.textContent=fmt(sec);el.className='timer'+(sec>90?' over':sec>60?' warn':'')}
+function stopTimer(){clearInterval(pInt);pInt=null}
+$('#pRandom').onclick=()=>{let q;do{q=Q[Math.floor(Math.random()*Q.length)]}while(pCur&&q.id===pCur.id&&Q.length>1);setPractice(q)};
+$('#pSpeak').onclick=()=>{if(!pCur)return toast('먼저 질문을 골라 주세요');speak(pCur.q)};
+$('#pStart').onclick=()=>{
+  if(!pCur)return toast('먼저 질문을 골라 주세요');
+  if(pInt){stopTimer();$('#pStart').innerHTML=I('play')+' 다시 시작';toast(fmt(pSec)+' 동안 답변했어요');return}
+  pSec=0;tick($('#pTimer'),0);$('#pStart').innerHTML=I('square')+' 답변 끝';
+  pInt=setInterval(()=>{pSec++;tick($('#pTimer'),pSec)},1000);
+};
+$('#pHint').onclick=()=>{
+  if(!pCur)return toast('먼저 질문을 골라 주세요');
+  const box=$('#pHintBox'); const mine=store.get('ans_'+pCur.id,'');
+  box.innerHTML=`<div class="callout blue"><b>핵심 포인트</b><ul class="clean">${pCur.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`+
+    (mine.trim()?`<div class="blk-t" style="margin-top:10px">${I('pen-line')} 내가 쓴 답변</div><div class="answer">${hl(mine)}</div>`:`<div class="blk-t" style="margin-top:10px">${I('message-square-quote')} 모범 답안</div><div class="answer">${hl(pCur.answer)}</div>`);
+  box.style.display=box.style.display==='block'?'none':'block';
+};
+function renderChecks(){
+  $('#pCheck').innerHTML=CHECKS.map((c,i)=>`<label><input type="checkbox" data-i="${i}"><span>${c}</span></label>`).join('');
+  const upd=()=>{const n=$('#pCheck').querySelectorAll('input:checked').length;
+    $('#pScore').innerHTML=`${n} / ${CHECKS.length} ` + (n===6?I('trophy')+' 완벽해요! 실전 준비 완료':n>=4?I('thumbs-up')+' 좋아요! 빠진 부분만 보완해요':n>0?I('dumbbell')+' 한 번 더 연습해 봐요':'');};
+  $('#pCheck').querySelectorAll('input').forEach(i=>i.onchange=upd); upd();
+}
+
+/* ===================== MOCK ===================== */
+let mQs=[], mIdx=0, mSec=0, mInt=null, mTimes=[];
+$('#mockStart').onclick=()=>{
+  mQs=shuffle(Q).slice(0,5); mIdx=0; mTimes=[];
+  $('#mockIntro').style.display='none'; $('#mockResult').style.display='none'; $('#mockRun').style.display='block';
+  showMock();
+};
+function showMock(){
+  const q=mQs[mIdx];
+  $('#mockSteps').innerHTML=mQs.map((_,i)=>`<i class="${i<=mIdx?'on':''}"></i>`).join('');
+  $('#mockLabel').textContent=`질문 ${mIdx+1} / ${mQs.length}`;
+  $('#mockQ').textContent=q.q; $('#mockNext').innerHTML=mIdx===mQs.length-1?'면접 종료 '+I('square'):'다음 질문 '+I('chevron-right');
+  clearInterval(mInt); mSec=0; tick($('#mockTimer'),0);
+  mInt=setInterval(()=>{mSec++;tick($('#mockTimer'),mSec)},1000);
+  if($('#mockVoice').checked)speak(q.q);
+}
+$('#mockRepeat').onclick=()=>speak(mQs[mIdx].q);
+$('#mockNext').onclick=()=>{
+  mTimes.push(mSec);
+  if(mIdx<mQs.length-1){mIdx++;showMock();return}
+  clearInterval(mInt); try{speechSynthesis.cancel()}catch(e){}
+  $('#mockRun').style.display='none';
+  const r=$('#mockResult'); r.style.display='block';
+  const total=mTimes.reduce((a,b)=>a+b,0);
+  r.innerHTML=`<h3>${I('party-popper')} 모의면접 완료!</h3><p class="muted">총 ${fmt(total)} · 문항별 시간을 보고 너무 짧거나(30초 미만) 길었던(1분 30초 초과) 답변을 다시 연습하세요.</p>
+   ${mQs.map((q,i)=>{const t=mTimes[i];const tag=t<30?'<span style="color:var(--gold)">짧음</span>':t>90?'<span style="color:var(--bad)">김</span>':'<span style="color:var(--good)">적당</span>';
+     return `<div class="term"><b>${q.id}. ${esc(q.q)}</b><br>${I('timer')} ${fmt(t)} · ${tag}
+       <details style="margin-top:6px"><summary style="cursor:pointer;color:var(--sea)">모범 답안 보기</summary><div class="answer" style="margin-top:6px">${hl(q.answer)}</div></details></div>`}).join('')}
+   <div class="btn-row" style="margin-top:12px"><button class="btn primary" id="mockAgain">${I('rotate-ccw')} 다시 하기</button></div>`;
+  $('#mockAgain').onclick=()=>$('#mockStart').onclick();
+  const cnt=store.get('mockCount',0)+1; store.set('mockCount',cnt); toast(`모의면접 ${cnt}회째 완료!`);
+};
+
+/* ===================== EXTRA ===================== */
+$('#extraList').innerHTML=EXTRA.map((e,i)=>`
+ <div class="q-item" id="e${i}">
+  <button class="q-head"><span class="q-num">${I('plus')}</span><span class="q-title">${esc(e.q)}</span><span class="q-arrow">${I('chevron-down')}</span></button>
+  <div class="q-body"><div class="blk">${e.a.replace(/\[([^\]]+)\]/g,'<span class="ph">$1</span>')}</div>${e.tip?`<div class="callout gold" style="margin-top:12px">${I('lightbulb')} ${e.tip}</div>`:''}
+  <div class="btn-row"><button class="btn" data-sp="${i}">${I('volume-2')} 질문 듣기</button></div></div>
+ </div>`).join('');
+$('#extraList').querySelectorAll('.q-item').forEach(el=>el.querySelector('.q-head').onclick=()=>el.classList.toggle('open'));
+$('#extraList').querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>speak(EXTRA[b.dataset.sp].q));
+
+/* ===================== FLASHCARDS ===================== */
+let fi=0;
+function showCard(){$('#flash').classList.remove('flip');setTimeout(()=>{$('#fFront').textContent=CARDS[fi].t;$('#fBack').textContent=CARDS[fi].d},150);$('#fCount').textContent=(fi+1)+' / '+CARDS.length}
+$('#flash').onclick=()=>$('#flash').classList.toggle('flip');
+$('#fNext').onclick=()=>{fi=(fi+1)%CARDS.length;showCard()};
+$('#fPrev').onclick=()=>{fi=(fi-1+CARDS.length)%CARDS.length;showCard()};
+
+/* ===================== FOOTER ===================== */
+$('#printBtn').onclick=()=>{document.querySelectorAll('#qList .q-item').forEach(e=>e.classList.add('open'));window.print()};
+$('#resetBtn').onclick=()=>{if(confirm('연습 완료 표시를 모두 지울까요? (작성한 답변은 남아 있어요)')){done={};store.set('done',done);updateProgress();renderList();toast('진도를 초기화했어요')}};
+
+/* ===================== INIT ===================== */
+renderFilter(); renderList(); renderPick(); renderChecks(); showCard(); updateProgress();
+</script>
+</body>
+</html>
